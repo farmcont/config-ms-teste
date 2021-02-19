@@ -1,0 +1,31 @@
+server:
+  port: 6062
+
+security:
+  oauth2:
+    resource:
+      id: bcrypt
+
+farmcont:
+  auth:
+    client:
+      client-id: client
+      client-secret: xu231i[IYDVHr;fEL,R*+#l(B}n+V<nw/_gTBFfOy0[?_f3StL
+      resource-ids: restservice
+      scopes: all
+      access-token-validity-seconds: 2592000 #3600 #one hour
+      refresh-token-validity-seconds: 2592000 #thirty days
+      authorized-grant-types: password, authorization_code, refresh_token
+
+spring:
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://db:5432/auth
+    username: services_access
+    password: .W}A|#m|k/t.-Pty}RAxi0l+<~e&XNnTM|~tl.#'% V^xiFaQ6e~KGZ}iM#c_]qn9Y3|V|01AHKZ+`yV|odo.S>QErF@`XrV>_E

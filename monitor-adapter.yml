@@ -1,0 +1,15 @@
+server:
+  port: 7078
+
+spring:
+  application:
+    name: monitor-adapter
+  jackson:
+    locale: pt-BR
+    time-zone: Brazil/East
+
+fiscal-io:
+  endpoint:
+    uri: http://172.31.30.254:8585
+    uri-key-test: https://fctest.requestcatcher.com/test
+    uri-key: https://api.fiscal.io/v1

@@ -1,0 +1,17 @@
+server:
+  port: 7074
+
+spring:
+  application:
+    name: fiscal
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://db:5432/fiscal
+    username: services_access
+    password: .W}A|#m|k/t.-Pty}RAxi0l+<~e&XNnTM|~tl.#'% V^xiFaQ6e~KGZ}iM#c_]qn9Y3|V|01AHKZ+`yV|odo.S>QErF@`XrV>_E
