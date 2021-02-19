@@ -1,0 +1,51 @@
+server:
+  port: 6060
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - TokenRelay
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: auth
+            client-id: client
+            client-secret: xu231i[IYDVHr;fEL,R*+#l(B}n+V<nw/_gTBFfOy0[?_f3StL
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://auth:6062/info/validator"
+            scope: all
+        provider:
+          auth:
+            authorization-uri: http://auth:6062/info/validator
+            token-uri: http://auth:6062/info/validator
+            user-info-uri: http://auth:6062/info/validator
+            jwk-set-uri: http://auth:6062/info/validator
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework.web: INFO
+#    org.springframework.web.HttpLogging: DEBUG
+#    org.springframework.security: DEBUG
+#    org.springframework.security.oauth2: DEBUG
+#    org.springframework.cloud.gateway: DEBUG

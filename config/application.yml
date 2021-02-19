@@ -1,0 +1,24 @@
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: http://discovery:6061/eureka/
+    register-with-eureka: true
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://auth:6062/info
+
+
+spring:
+  jpa:
+    open-in-view: false
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
