@@ -11,6 +11,6 @@ spring:
 fiscal-io:
   endpoint:
     uri: http://172.31.30.254:8585
-    uri-key-test: https://fctest.requestcatcher.com/test
-    uri-key: https://api.fiscal.io/v1
+    uri-key-test: https://api.fiscal.io/v1
+    uri-key: https://fctest.requestcatcher.com/test
     uri-key-token: Basic ede8b2f9-2760-4e41-88fd-37823a3c8563
